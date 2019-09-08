@@ -1,0 +1,23 @@
+{
+  "author": "Patrick Assoa Adou",
+  "name": "functional-typescript-lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/src/index.js",
+  "typings": "dist/src/index.d.ts",
+  "scripts": {
+    "compile": "tsc",
+    "test": "npm run compile && jest",
+    "testWithCoverage": "npm run compile && jest --coverage "
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "jest": "^24.7.1",
+    "jest-cli": "^24.7.1",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.15.0",
+    "typescript": "^3.4.2"
+  },
+  "dependencies": {}
+}
