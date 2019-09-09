@@ -10,8 +10,13 @@
     "test": "npm run compile && jest",
     "testWithCoverage": "npm run compile && jest --coverage ",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "prepare" : "npm run compile",
+    "prepublishOnly" : "npm test && npm run format",
+    "version" : "git add .",
+    "postversion" : "git push && git push --tags"
   },
+  "files": ["src/**/*"],
   "repository": {
     "type": "git",
     "url": "https://github.com/kanian/functional-typescript-lib"
@@ -21,6 +26,7 @@
     "@types/jest": "^24.0.11",
     "jest": "^24.7.1",
     "jest-cli": "^24.7.1",
+    "prettier": "^1.18.2",
     "ts-jest": "^24.0.2",
     "tslint": "^5.15.0",
     "tslint-config-prettier": "^1.18.0",

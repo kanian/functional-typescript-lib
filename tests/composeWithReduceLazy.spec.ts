@@ -1,5 +1,5 @@
-import { composeWithReduceLazy } from "../src/composeWithReduceLazy";
-import {compose} from "../src/compose"
+import { compose } from '../src/compose';
+import { composeWithReduceLazy } from '../src/composeWithReduceLazy';
 
 const sum = (...x: number[]) => {
   return x.reduce((x = 0, y) => x + y);

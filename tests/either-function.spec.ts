@@ -1,8 +1,8 @@
-import { compose } from "../src/compose";
-import { curry } from "../src/curry";
-import { either } from "../src/either-function";
-import { Either } from "../src/Either";
-import { prop } from "../src/prop";
+import { compose } from '../src/compose';
+import { curry } from '../src/curry';
+import { either } from '../src/either-function';
+import { Either } from '../src/Either';
+import { prop } from '../src/prop';
 
 
 

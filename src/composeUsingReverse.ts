@@ -4,7 +4,7 @@ function composeUsingReverse(...fns) {
     const composedFn = function composed(...args) {
         return fn2(fn1(...args))
     }
-    if (rest.length == 0) {
+    if (rest.length === 0) {
         return composedFn
     }
     return composeUsingReverse(...rest.reverse(), composedFn)

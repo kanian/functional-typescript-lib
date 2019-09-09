@@ -1,4 +1,4 @@
-import { Container } from './RealContainer';
+import { Container } from './RealContainer'
 
 class Just<T> extends Container<T> {
     // aka: bind, flatMap
@@ -8,6 +8,8 @@ class Just<T> extends Container<T> {
     public ap(anotherMonad) {
         return anotherMonad.map(this.$value)
     }
-    public map<B>(fn: (x: T) => B): Just<B>  {return new Just<B>(fn(this.$value))}
+    public map<B>(fn: (x: T) => B): Just<B> {
+        return new Just<B>(fn(this.$value))
+    }
 }
 export { Just }

@@ -1,9 +1,8 @@
-import { composeUsingReverse } from "../src/composeUsingReverse";
-import { prop } from "../src/prop";
-import { Maybe } from "../src/Maybe";
-import { Container } from "../src/Container";
-import { Nothing } from "../src/Nothing";
-import { identity } from "../src/identity";
+import { composeUsingReverse } from '../src/composeUsingReverse';
+import { Container } from '../src/Container';
+import { identity } from '../src/identity';
+import { Maybe } from '../src/Maybe';
+import { Nothing } from '../src/Nothing';
 
 describe("Maybe is a functor because: ", () =>  {
   it(" Maybe.map respects the functor identity law for Container", () =>  {

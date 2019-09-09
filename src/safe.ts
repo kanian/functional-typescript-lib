@@ -1,6 +1,5 @@
+import { Maybe } from './RealMaybe'
 
-import { Maybe } from "./RealMaybe";
+const safe = (fn: (x: any) => any) => x => Maybe.of(fn(x))
 
-const safe = (fn: Function) => (x) => Maybe.of(fn(x))
-
-export{safe}
+export { safe }

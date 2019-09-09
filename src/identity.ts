@@ -1,5 +1,5 @@
-function identity(v){
+function identity(v) {
     return v
 }
 
-export {identity}
+export { identity }

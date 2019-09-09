@@ -9,7 +9,7 @@ class Either {
     public static isRight(either: Right | Left) {
         return either instanceof Right
     }
-    
+
     public $value
 
     constructor($value = null, left = false) {

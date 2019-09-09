@@ -1,5 +1,5 @@
-import { composeWithReduceLazy } from "../src/composeWithReduceLazy"
-import { composeWithReduceRightEager } from "../src/composeWithReduceRightEager"
+import { composeWithReduceLazy } from '../src/composeWithReduceLazy';
+import { composeWithReduceRightEager } from '../src/composeWithReduceRightEager';
 describe("composeWithReduceRightEager: ", () => {
   it("behave the same as composeWithReduceLazy", () => {
     const sum = (x, y) => x + y

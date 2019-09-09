@@ -1,7 +1,7 @@
-function not(fn){
+function not(fn) {
     return (...args) => {
         return !fn(...args)
     }
 }
 
-export {not}
+export { not }

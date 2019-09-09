@@ -1,5 +1,5 @@
-import {partialRightUsingReverseArgs} from "../src/partialRightUsingReverseArgs"
-import {partialRight} from "../src/partialRight"
+import { partialRight } from '../src/partialRight';
+import { partialRightUsingReverseArgs } from '../src/partialRightUsingReverseArgs';
 describe("partialRightUsingReverseArgs: ", () => {
     it("should behave exactly as partialRight", () => {
         const sum4 = (w,x,y,z) => w+x+y+z

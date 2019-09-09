@@ -1,4 +1,3 @@
-
 class Container<T> {
     protected $value
     constructor($value: T) {

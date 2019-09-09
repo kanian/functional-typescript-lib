@@ -3,7 +3,6 @@ import { Either } from './Either'
 import { Left } from '../src/Left'
 import { Right } from '../src/Right'
 
-
 const either = curry((f, g, e: Either) => {
     let result
     const value: Right | Left = e.unwrapValue()
