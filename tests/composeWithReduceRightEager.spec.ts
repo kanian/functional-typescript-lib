@@ -1,10 +1,12 @@
-import {composeWithReduceRightEager} from "../src/composeWithReduceRightEager"
-import {composeWithReduceLazy}  from "../src/composeWithReduceLazy"
-describe("composeWithReduceRightEager: ", function(){
-    it("behave the same as composeWithReduceLazy", function(){
-        let sum = (x,y)=> x+y
-      let square = x => x*x
-      let minus = x => -x
-      expect(composeWithReduceRightEager(minus,square,sum)(2,3)).toEqual(composeWithReduceLazy(minus,square,sum)(2,3))
-    })
+import { composeWithReduceLazy } from "../src/composeWithReduceLazy"
+import { composeWithReduceRightEager } from "../src/composeWithReduceRightEager"
+describe("composeWithReduceRightEager: ", () => {
+  it("behave the same as composeWithReduceLazy", () => {
+    const sum = (x, y) => x + y
+    const square = x => x * x
+    const minus = x => -x
+    expect(composeWithReduceRightEager(minus, square, sum)(2, 3)).toEqual(
+      composeWithReduceLazy(minus, square, sum)(2, 3)
+    )
+  })
 })

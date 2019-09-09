@@ -2,8 +2,8 @@ import { curry } from "./curry";
 import { not } from "./not";
 
 function filter(predicate:(v,k,xs:[any]) => boolean, xs: [any]) {
-  let filtered = []
-    for (let [key, value] of xs.entries()) {
+  const filtered = []
+    for (const [key, value] of xs.entries()) {
       if(predicate(value,key,xs)){
         filtered.push(value)
       }
@@ -11,7 +11,7 @@ function filter(predicate:(v,k,xs:[any]) => boolean, xs: [any]) {
     return filtered
 }
 
-var filterOut = curry((predicate:(v,k,xs:[any]) => boolean,xs) => filter(not(predicate),xs))
-var filterIn = curry(filter)
+const filterOut = curry((predicate:(v,k,xs:[any]) => boolean,xs) => filter(not(predicate),xs))
+const filterIn = curry(filter)
 
 export {filterIn,filterOut}

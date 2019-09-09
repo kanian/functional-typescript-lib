@@ -1,12 +1,12 @@
 import { compose } from './compose'
 
 class IO {
-    constructor(private executeUnsafeIO: Function) {}
-    static of(x) {
+    public static of(x) {
         return new IO(() => x)
     }
+    constructor(private executeUnsafeIO: Function) {}
 
-    map(fn) {
+    public map(fn) {
         return IO.of(
             compose(
                 fn,
@@ -15,7 +15,7 @@ class IO {
         )
     }
 
-    toString() {
+    public toString() {
         return `IO(${this.executeUnsafeIO})`
     }
 }

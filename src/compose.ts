@@ -1,5 +1,5 @@
 const compose = (...fns) => result => {
-    let fnList = [...fns]
+    const fnList = [...fns]
     while (fnList.length > 0) {
         // take the last function off the end of the list
         // and execute it

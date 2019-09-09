@@ -1,21 +1,20 @@
 import { Either } from '../src/Either'
 
 class Right {
-    constructor(private $value) {}
-
     public static of(x = null) {
         return new Right(x)
     }
+    constructor(private $value) {}
 
-    unwrapValue() {
+    public unwrapValue() {
         return this.$value
     }
 
-    map(fn) {
+    public map(fn) {
         return Either.of(fn(this.$value))
     }
 
-    toString() {
+    public toString() {
         return `Right(${this.$value})`
     }
 }

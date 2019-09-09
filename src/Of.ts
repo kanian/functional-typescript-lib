@@ -1,10 +1,10 @@
 
 class Of<T>{
-    $value
+    public $value
     constructor($value: T){
         this.$value = $value
     }
-    of(x:T): Of<T> {
+    public of(x:T): Of<T> {
         return new Of<T>(x);
     }
 

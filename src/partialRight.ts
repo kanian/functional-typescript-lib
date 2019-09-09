@@ -1,7 +1,5 @@
 function partialRight(fn, ...presetBackArgs) {
-    return function(...laterFrontArgs) {
-        return fn(...laterFrontArgs, ...presetBackArgs)
-    }
+    return (...laterFrontArgs) => fn(...laterFrontArgs, ...presetBackArgs)
 }
 
 export { partialRight }

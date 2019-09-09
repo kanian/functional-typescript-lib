@@ -1,6 +1,6 @@
-var mildCurry = (fn, arity = fn.length, nextCurried = null) => 
+const mildCurry = (fn, arity = fn.length, nextCurried = null) => 
   (nextCurried = (prevArgs) => (...nextArg ) => {
-    var args = [...prevArgs, ...nextArg];
+    const args = [...prevArgs, ...nextArg];
     if (args.length >= arity) {
       return fn(...args);
     } else {

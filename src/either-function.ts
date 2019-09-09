@@ -1,11 +1,12 @@
-import { Right } from '../src/Right'
+import { curry } from './curry'
+import { Either } from './Either'
 import { Left } from '../src/Left'
-import { curry } from './curry';
-import { Either } from './Either';
+import { Right } from '../src/Right'
+
 
 const either = curry((f, g, e: Either) => {
     let result
-    let value: Right | Left = e.unwrapValue()
+    const value: Right | Left = e.unwrapValue()
     switch (value.constructor) {
         case Left:
             result = f(value.unwrapValue())
@@ -18,4 +19,4 @@ const either = curry((f, g, e: Either) => {
     return result
 })
 
-export {either}
+export { either }

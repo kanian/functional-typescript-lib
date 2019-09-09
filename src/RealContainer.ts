@@ -1,6 +1,6 @@
 
 class Container<T> {
-    $value
+    protected $value
     constructor($value: T) {
         this.$value = $value
     }

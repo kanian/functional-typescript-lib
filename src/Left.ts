@@ -1,22 +1,20 @@
 import { Either } from '../src/Either'
 
 class Left {
-    constructor(private $value = '') {}
-
     public static of(x = null) {
-        let left = true
         return new Left(x)
     }
+    constructor(private $value = '') {}
 
-    unwrapValue() {
+    public unwrapValue() {
         return this.$value
     }
 
-    map(fn) {
+    public map(fn) {
         return this
     }
 
-    toString() {
+    public toString() {
         return `Left(${this.$value})`
     }
 }

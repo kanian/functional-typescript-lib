@@ -1,49 +1,46 @@
-import { either } from "../src/either-function";
-
-import { Right } from "../src/Right";
-import { Left } from "../src/Left";
-import { Either } from "../src/Either";
-import { curry } from "../src/curry";
-import { prop } from "../src/prop";
 import { compose } from "../src/compose";
+import { curry } from "../src/curry";
+import { either } from "../src/either-function";
+import { Either } from "../src/Either";
+import { prop } from "../src/prop";
 
 
 
-describe("either function: embodies disjuction by selectively applying functions f and g depending on e being Right or Left", function() {
-  it("When e is Right, execute fortune", function() {
+describe("either function: embodies disjuction by selectively applying functions f and g depending on e being Right or Left", () =>  {
+  it("When e is Right, execute fortune", () =>  {
     
     expect(tellHimIfHegotAGift(jake)).toEqual(fortune('Address 1'));
   })
-  it("When e is Left, execute misfortune", function() {
+  it("When e is Left, execute misfortune", () =>  {
     
     expect(tellHimIfHegotAGift(john)).toEqual(misfortune('A Person must have an address'));
   });
 });
 
 
-var Person = class {
+const Person = class {
   constructor(private name, private addresses){
     this.name = name
     this.addresses = [...addresses]
   }
-  isValid(){
+  public isValid(){
     return this.addresses.length > 0
   }
-  toString(){
+  public toString(){
     return `this.name: ${this.name}
      this.addresses: ${this.addresses.join()}`
   }
 }
 
-var indexAccess = curry((f, anyIndexable) => f(anyIndexable));
-var getHead = xs => indexAccess(r => r[0])(xs)
+const indexAccess = curry((f, anyIndexable) => f(anyIndexable));
+const getHead = xs => indexAccess(r => r[0])(xs)
 
 const fortune = address => `Congrats! You will recieve your gift at address: ${address}`;
 const misfortune = txt => `Sorry! You will not receive anything because... ${txt}`
 
 function getAddress(person) {
-  var left = true;
-  var getAddressesHead = compose(
+  const left = true;
+  const getAddressesHead = compose(
     getHead,
     prop("addresses")
   );
@@ -55,5 +52,5 @@ function getAddress(person) {
 const decideOnGift = either(misfortune)(fortune)
 const tellHimIfHegotAGift = compose(decideOnGift, getAddress)
 
-var jake = new Person('jake',['Address 1', 'Address 2'])
-var john = new Person('john', [])
+const jake = new Person('jake',['Address 1', 'Address 2'])
+const john = new Person('john', [])
