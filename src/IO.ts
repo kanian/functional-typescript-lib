@@ -20,4 +20,4 @@ class IO {
     }
 }
 
-export {IO}
+export { IO }
