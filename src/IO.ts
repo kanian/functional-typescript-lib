@@ -19,3 +19,5 @@ class IO {
         return `IO(${this.executeUnsafeIO})`
     }
 }
+
+export {IO}
