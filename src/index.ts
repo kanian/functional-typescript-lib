@@ -7,7 +7,7 @@ import { composeWithReduceRightEager } from './composeWithReduceRightEager'
 import { Container } from './Container'
 import { curry } from './curry'
 import { curryProps } from './curryProps'
-import {filterIn, filterOut} from "./filter"
+import { filterIn, filterOut } from './filter'
 import { either } from './either-function'
 import { Either } from './Either'
 import { IO } from './IO'
