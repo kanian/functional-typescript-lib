@@ -3,15 +3,15 @@ import { Either } from './Either'
 import { Left } from '../src/Left'
 import { Right } from '../src/Right'
 
-const either = curry((f, g, e: Either) => {
+const either = curry((onFailure, onSuccess, v: Either) => {
     let result
-    const value: Right | Left = e.unwrapValue()
+    const value: Right | Left = v.unwrapValue()
     switch (value.constructor) {
         case Left:
-            result = f(value.unwrapValue())
+            result = onFailure(value.unwrapValue())
             break
         case Right:
-            result = g(value.unwrapValue())
+            result = onSuccess(value.unwrapValue())
             break
         // No Default
     }
