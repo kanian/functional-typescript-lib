@@ -33,7 +33,9 @@ import { Nothing as RealNothing } from './RealNothing'
 import { reverseArgs } from './reverseArgs'
 import { Right } from './Right'
 import { safe } from './safe'
-
+import {Either as RealEither} from "./RealEither"
+import {Right as RealRight} from "./RealRight"
+import {Left as RealLeft} from "./RealLeft"
 export {
     compose,
     compose2,
@@ -66,7 +68,10 @@ export {
     pipeUsingReverseAndCompose,
     prop,
     RealContainer,
+    RealEither,
+    RealLeft,
     RealNothing,
+    RealRight,
     reverseArgs,
     Right,
     safe
