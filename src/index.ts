@@ -9,6 +9,8 @@ import { curry } from './curry'
 import { curryProps } from './curryProps'
 import { filterIn, filterOut } from './filter'
 import { either } from './either-function'
+import { either as eitherFunction} from './real-either-function'
+
 import { Either } from './Either'
 import { IO } from './IO'
 import { Just } from './Just'
@@ -33,9 +35,9 @@ import { Nothing as RealNothing } from './RealNothing'
 import { reverseArgs } from './reverseArgs'
 import { Right } from './Right'
 import { safe } from './safe'
-import {Either as RealEither} from "./RealEither"
-import {Right as RealRight} from "./RealRight"
-import {Left as RealLeft} from "./RealLeft"
+import { Either as RealEither } from './RealEither'
+import { Right as RealRight } from './RealRight'
+import { Left as RealLeft } from './RealLeft'
 export {
     compose,
     compose2,
@@ -49,6 +51,7 @@ export {
     filterIn,
     filterOut,
     either,
+    eitherFunction,
     Either,
     IO,
     Just,
