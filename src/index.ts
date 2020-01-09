@@ -9,7 +9,7 @@ import { curry } from './curry'
 import { curryProps } from './curryProps'
 import { filterIn, filterOut } from './filter'
 import { either } from './either-function'
-import { either as eitherFunction} from './real-either-function'
+import { either as eitherFunction } from './real-either-function'
 
 import { Either } from './Either'
 import { IO } from './IO'
