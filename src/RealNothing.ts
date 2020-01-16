@@ -1,4 +1,4 @@
-import { Container } from './RealContainer'
+import { Container } from './Container'
 
 class Nothing<T> extends Container<T> {
     public flatMap(fn) {
@@ -7,8 +7,8 @@ class Nothing<T> extends Container<T> {
     public ap(anotherMonad) {
         return this
     }
-    public map(fn: (x: T) => T): Nothing<T> {
-        return new Nothing<T>(null)
+    public map<B = T>(fn: (x: T) => any): Nothing<B> {
+        return new Nothing<B>(null)
     }
 }
 

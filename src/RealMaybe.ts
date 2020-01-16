@@ -5,7 +5,7 @@ class Maybe<T> extends Just<T> {
     public static of<T>(x: T): Nothing<T> | Just<T> {
         return x == null ? new Nothing<T>(null) : new Just<T>(x)
     }
-    protected $value: T | null
+    //protected $value: T | null
 
     constructor($value: T = null) {
         super($value)

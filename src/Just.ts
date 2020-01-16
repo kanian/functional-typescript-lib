@@ -1,4 +1,4 @@
-import { Container } from './RealContainer'
+import { Container } from './Container'
 
 class Just<T> extends Container<T> {
     // aka: bind, flatMap

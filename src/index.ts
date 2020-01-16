@@ -16,7 +16,6 @@ import { IO } from './IO'
 import { Just } from './Just'
 import { Left } from './Left'
 import { map } from './map'
-import { Maybe } from './Maybe'
 import { Maybe as RealMaybe } from './RealMaybe'
 import { mildCurry } from './mildCurry'
 import { not } from './not'
@@ -30,7 +29,6 @@ import { partialRightUsingReverseArgs } from './partialRightUsingReverseArgs'
 import { pipe } from './pipe'
 import { pipeUsingReverseAndCompose } from './pipeUsingReverseAndCompose'
 import { prop } from './prop'
-import { Container as RealContainer } from './RealContainer'
 import { Nothing as RealNothing } from './RealNothing'
 import { reverseArgs } from './reverseArgs'
 import { Right } from './Right'
@@ -57,7 +55,6 @@ export {
     Just,
     Left,
     map,
-    Maybe,
     RealMaybe,
     mildCurry,
     not,
@@ -70,7 +67,6 @@ export {
     pipe,
     pipeUsingReverseAndCompose,
     prop,
-    RealContainer,
     RealEither,
     RealLeft,
     RealNothing,

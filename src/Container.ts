@@ -1,10 +1,14 @@
-class Container {
-    public static of(x) {
-        return new Container(x)
-    }
-    constructor(private $value) {}
+import { Of } from "./Of"
 
-    public map(fn) {
+class Container<T> extends Of<T>{
+    public static of<T>(x: T): Container<T> {
+        return new Container<T>(x)
+    }
+    constructor($value: T) {
+        super($value)
+    }
+
+    public map<B = T>(fn: (x: T) => B) {
         return Container.of(fn(this.$value))
     }
 }
