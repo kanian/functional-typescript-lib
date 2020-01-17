@@ -1,17 +1,18 @@
 import { Either } from './RealEither'
 
-class Left<T, U> {
-    public static of<T, U>(x: U = null) {
-        return new Left<T, U>(x)
+class Left<T> extends Either<T> {
+    public static of<T>(x: T = null) {
+        return new Left<T>(x)
     }
-    constructor(private $value: U) {}
-
-    public unwrapValue(): U {
-        return this.$value
+    // public isRight<T>() : boolean {
+    //     return false
+    // }
+    constructor($value: T) {
+        super($value)
     }
 
-    public map<B>(fn: (x: T) => B): Either<B | T, U> {
-        return new Either<T, U>(this.$value, true)
+    public map<T>(fn: any): Left<T> {
+        return Left.of(this.$value as any)
     }
 
     public toString() {

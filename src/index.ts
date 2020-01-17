@@ -8,19 +8,16 @@ import { Container } from './Container'
 import { curry } from './curry'
 import { curryProps } from './curryProps'
 import { filterIn, filterOut } from './filter'
-import { either } from './either-function'
-import { either as eitherFunction} from './real-either-function'
+import { either as eitherFunction } from './real-either-function'
 
-import { Either } from './Either'
 import { IO } from './IO'
 import { Just } from './Just'
-import { Left } from './Left'
 import { map } from './map'
 import { Maybe as RealMaybe } from './RealMaybe'
 import { mildCurry } from './mildCurry'
 import { not } from './not'
 
-import { Nothing } from './Nothing'
+import { Nothing as RealNothing } from './Nothing'
 import { Of } from './Of'
 import { partial } from './partial'
 import { partialProps } from './partialProps'
@@ -29,13 +26,12 @@ import { partialRightUsingReverseArgs } from './partialRightUsingReverseArgs'
 import { pipe } from './pipe'
 import { pipeUsingReverseAndCompose } from './pipeUsingReverseAndCompose'
 import { prop } from './prop'
-import { Nothing as RealNothing } from './RealNothing'
+import { Nothing } from './RealNothing'
 import { reverseArgs } from './reverseArgs'
-import { Right } from './Right'
 import { safe } from './safe'
-import { Either as RealEither } from './RealEither'
-import { Right as RealRight } from './RealRight'
-import { Left as RealLeft } from './RealLeft'
+import { Either  } from './RealEither'
+import { Right  } from './RealRight'
+import { Left  } from './RealLeft'
 export {
     compose,
     compose2,
@@ -48,12 +44,9 @@ export {
     curryProps,
     filterIn,
     filterOut,
-    either,
     eitherFunction,
-    Either,
     IO,
     Just,
-    Left,
     map,
     RealMaybe,
     mildCurry,
@@ -67,11 +60,10 @@ export {
     pipe,
     pipeUsingReverseAndCompose,
     prop,
-    RealEither,
-    RealLeft,
+    Either,
+    Left,
     RealNothing,
-    RealRight,
-    reverseArgs,
     Right,
+    reverseArgs,
     safe
 }

@@ -3,6 +3,7 @@ import { curry } from '../src/curry';
 import { either } from '../src/real-either-function';
 import { Either } from '../src/RealEither';
 import { prop } from '../src/prop';
+import { Left } from '../src/RealLeft';
 
 
 
@@ -39,14 +40,13 @@ const fortune = address => `Congrats! You will recieve your gift at address: ${a
 const misfortune = txt => `Sorry! You will not receive anything because... ${txt}`
 
 function getAddress(person) {
-  const left = true;
   const getAddressesHead = compose(
     getHead,
     prop("addresses")
   );
   return person.isValid()
     ? Either.of(person).map(getAddressesHead)
-    : Either.of("A Person must have an address", left)
+    : Left.of("A Person must have an address")
 }
 
 const decideOnGift = either(misfortune)(fortune)
