@@ -4,11 +4,15 @@ import { IApplicable } from '../algebra/interfaces/IApplicable'
 import { IMappable } from '../algebra/interfaces/IMappable'
 
 export class Applicative<T> extends APointable
-    implements IApplicable, IMappable<T> {
-    map<B = T>(fn: (x: T) => B): IMappable<B> {
-        return new Functor(fn(this.$value))
+    implements IApplicable<T> {
+    map<B = T>(fn: (x: T) => B): Applicative<B> {
+        return new Applicative(fn(this.$value))
     }
-    ap(a: IMappable<any>): IMappable<any> {
+    ap(a:IApplicable<T>): IApplicable<T>{
         return a.map(this.value)
+    }
+    public static of<T>(x: T): Applicative<T> {
+        const a = new Applicative<T>(x)
+        return a
     }
 }
