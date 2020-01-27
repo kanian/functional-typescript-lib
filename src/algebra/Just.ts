@@ -32,8 +32,3 @@ export class Just<T> extends APointable
         return Just.of(fn(this.$value))
     }
 }
-
-const j = Just.of(3)
-const k = Just.of(x => x)
-const i = k.ap(j)
-console.log(i)
