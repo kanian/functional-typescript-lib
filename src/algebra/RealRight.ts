@@ -6,17 +6,17 @@ import { IApplicable } from './interfaces/IApplicable'
 import { IJoinable } from './interfaces/IJoinable'
 
 class Right<T> extends Either<T>
-    implements IMappable<T>, IChainable<T>, IApplicable {
+    implements IMappable<T>, IChainable<T>, IApplicable<T> {
     constructor($value: T) {
         super($value)
     }
-    chain<B = T>(fn: (x: T) => B): IChainable<B> {
+    chain<B = T>(fn: (x: T) => B): IChainable<any> {
         return this.map(fn).join()
     }
     join() {
         return Right.of<T>(this.value)
     }
-    ap(a: IMappable<any>): IMappable<any> {
+    ap(a: IApplicable<any>): IApplicable<any> {
         return a.map(this.value)
     }
     public static of<T>(x: T): Right<T> {

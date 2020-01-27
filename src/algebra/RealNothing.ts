@@ -2,11 +2,9 @@ import { APointable } from './interfaces/APointable'
 import { IApplicable } from './interfaces/IApplicable'
 import { IChainable } from './interfaces/IChainable'
 import { IJoinable } from './interfaces/IJoinable'
-import { IMappable } from './interfaces/IMappable'
 
-class Nothing<T> extends APointable
-    implements IChainable<T>, IMappable<T>, IApplicable {
-    chain<B = any>(fn: (x: any) => B): IChainable<B> {
+class Nothing<T> extends APointable implements IChainable<T>, IApplicable<T> {
+    chain<B = any>(fn: (x: any) => B): IChainable<any> {
         return Nothing.of(null)
     }
     join(): IJoinable {

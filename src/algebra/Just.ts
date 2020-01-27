@@ -6,12 +6,12 @@ import { Nothing } from './RealNothing'
 
 /** Just is a Monad */
 export class Just<T> extends APointable
-    implements IMappable<T>, IChainable<T>, IApplicable {
-    chain<B = T>(fn: (x: T) => B): IChainable<B> {
+    implements IMappable<T>, IChainable<T>, IApplicable<T> {
+    chain<B = T>(fn: (x: T) => B): IChainable<any> {
         return this.map(fn).join<B>()
     }
 
-    ap(a: IMappable<any>): IMappable<any> {
+    ap(a: IApplicable<any>): IApplicable<any> {
         return a.map(this.value)
     }
 
@@ -32,8 +32,3 @@ export class Just<T> extends APointable
         return Just.of(fn(this.$value))
     }
 }
-
-const j = Just.of(3)
-const k = Just.of(x => x)
-const i = k.ap(j)
-console.log(i)
