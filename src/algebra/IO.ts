@@ -1,4 +1,4 @@
-import { compose } from '../functions/compose';
+import { compose } from '../functions/compose'
 
 class IO {
     public static of(x) {

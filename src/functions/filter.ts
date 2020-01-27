@@ -1,5 +1,5 @@
-import { curry } from './curry';
-import { not } from './not';
+import { curry } from './curry'
+import { not } from './not'
 
 function filter(predicate: (v, k, xs: [any]) => boolean, xs: [any]) {
     const filtered = []

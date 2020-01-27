@@ -1,7 +1,7 @@
-import { Functor } from './Functor';
-import { APointable } from '../algebra/interfaces/APointable';
-import { IApplicable } from '../algebra/interfaces/IApplicable';
-import { IMappable } from '../algebra/interfaces/IMappable';
+import { Functor } from './Functor'
+import { APointable } from '../algebra/interfaces/APointable'
+import { IApplicable } from '../algebra/interfaces/IApplicable'
+import { IMappable } from '../algebra/interfaces/IMappable'
 
 export class Applicative<T> extends APointable
     implements IApplicable, IMappable<T> {

@@ -8,8 +8,8 @@ import { safe } from '../../src/functions/safe';
 describe('Just is a Functor because: ', () => {
   it(' Just.map respects the Functor identity law for Just<T>', () => {
     const JustOf1 = Just.of<number>(1)
-    expect(JustOf1.map(identity).map(identity).value).toBe(
-      JustOf1.map(identity).value
+    expect(JustOf1.map(identity).value).toBe(
+      JustOf1.value
     )
   })
 
@@ -18,12 +18,10 @@ describe('Just is a Functor because: ', () => {
     const mult2 = x => x * 2
     const add1ThenMult2 = composeUsingReverse(mult2, add1)
     const JustOf1 = Just.of<number>(1)
-    expect(JustOf1.map(add1ThenMult2).map(identity).value).toEqual(
+    expect(JustOf1.map(add1ThenMult2).value).toEqual(
       JustOf1.map(add1)
-        .map(mult2)
-        .map(identity).value
+        .map(mult2).value
     )
-    expect(JustOf1.map(add1ThenMult2).map(identity).value).toBe(4)
   })
 
   it(' Just.map can map from Just<T> to Just<U> ', () => {

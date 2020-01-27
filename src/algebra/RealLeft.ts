@@ -1,10 +1,10 @@
-import { Either } from ".."
-import { IMappable } from "./interfaces/IMappable"
-import { IChainable } from "./interfaces/IChainable"
-import { IApplicable } from "./interfaces/IApplicable"
+import { Either } from '..'
+import { IMappable } from './interfaces/IMappable'
+import { IChainable } from './interfaces/IChainable'
+import { IApplicable } from './interfaces/IApplicable'
 
 class Left<T> extends Either<T>
-implements IMappable<T>, IChainable<T>, IApplicable {
+    implements IMappable<T>, IChainable<T>, IApplicable {
     constructor($value: T) {
         super($value)
     }
