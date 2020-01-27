@@ -10,7 +10,7 @@ class Right<T> extends Either<T>
     constructor($value: T) {
         super($value)
     }
-    chain<B = T>(fn: (x: T) => B): IChainable<B> {
+    chain<B = T>(fn: (x: T) => B): IChainable<any> {
         return this.map(fn).join()
     }
     join() {

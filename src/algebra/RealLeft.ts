@@ -13,7 +13,7 @@ class Left<T> extends Either<T> implements IChainable<T>, IApplicable<T> {
     public get isLeft() {
         return true
     }
-    chain<B = T>(fn: (x: T) => B): IChainable<B> {
+    chain<B = T>(fn: (x: T) => B): IChainable<any> {
         return this.map(fn).join()
     }
     join<T>() {
