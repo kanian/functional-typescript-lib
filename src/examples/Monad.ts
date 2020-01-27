@@ -1,7 +1,7 @@
-import { IApplicable } from '../algebra/interfaces/IApplicable';
-import { IChainable } from '../algebra/interfaces/IChainable';
-import { IMappable } from '../algebra/interfaces/IMappable';
-import { PointedFunctor } from './PointedFunctor';
+import { IApplicable } from '../algebra/interfaces/IApplicable'
+import { IChainable } from '../algebra/interfaces/IChainable'
+import { IMappable } from '../algebra/interfaces/IMappable'
+import { PointedFunctor } from './PointedFunctor'
 
 class Monad<T> extends PointedFunctor<T> implements IChainable<T>, IApplicable {
     chain<B = T>(fn: (x: T) => B): IChainable<B> {

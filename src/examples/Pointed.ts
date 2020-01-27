@@ -1,4 +1,4 @@
-import { Container } from '../algebra/Container';
+import { Container } from '../algebra/Container'
 
 class Pointed<T = any> extends Container {
     public constructor($value: T) {

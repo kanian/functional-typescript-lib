@@ -1,5 +1,5 @@
-import { Just } from './Just';
-import { Nothing } from './RealNothing';
+import { Just } from './Just'
+import { Nothing } from './RealNothing'
 
 class Maybe<T> extends Just<T> {
     public static of<T>(x: T): Nothing<T> | Just<T> {
