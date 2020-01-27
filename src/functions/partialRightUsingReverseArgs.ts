@@ -1,5 +1,5 @@
-import { partial } from './partial';
-import { reverseArgs } from './reverseArgs';
+import { partial } from './partial'
+import { reverseArgs } from './reverseArgs'
 
 function partialRightUsingReverseArgs(fn, ...presetArgs) {
     return function reversedPartial(...laterArgs) {

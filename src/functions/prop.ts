@@ -1,4 +1,4 @@
-import { curry } from './curry';
+import { curry } from './curry'
 
 function _prop(name, obj) {
     return obj[name]

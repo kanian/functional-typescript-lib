@@ -1,4 +1,4 @@
-import { compose2 } from './compose2';
+import { compose2 } from './compose2'
 
 const composeUsingCompose2 = (...fns) => value => {
     const applyCompose2 = fnList => {

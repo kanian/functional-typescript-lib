@@ -1,5 +1,5 @@
-import { APointable } from '../algebra/interfaces/APointable';
-import { IMappable } from '../algebra/interfaces/IMappable';
+import { APointable } from '../algebra/interfaces/APointable'
+import { IMappable } from '../algebra/interfaces/IMappable'
 
 class PointedFunctor<T> extends APointable implements IMappable<T> {
     public constructor($value: T) {
@@ -16,6 +16,3 @@ class PointedFunctor<T> extends APointable implements IMappable<T> {
 }
 
 export { PointedFunctor }
-
-
-

@@ -1,8 +1,8 @@
-import { APointable } from './interfaces/APointable';
-import { IApplicable } from './interfaces/IApplicable';
-import { IChainable } from './interfaces/IChainable';
-import { IMappable } from './interfaces/IMappable';
-import { Nothing } from './RealNothing';
+import { APointable } from './interfaces/APointable'
+import { IApplicable } from './interfaces/IApplicable'
+import { IChainable } from './interfaces/IChainable'
+import { IMappable } from './interfaces/IMappable'
+import { Nothing } from './RealNothing'
 
 /** Just is a Monad */
 export class Just<T> extends APointable
