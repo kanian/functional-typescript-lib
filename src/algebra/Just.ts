@@ -6,12 +6,12 @@ import { Nothing } from './RealNothing'
 
 /** Just is a Monad */
 export class Just<T> extends APointable
-    implements IMappable<T>, IChainable<T>, IApplicable {
+    implements IMappable<T>, IChainable<T>, IApplicable<T> {
     chain<B = T>(fn: (x: T) => B): IChainable<B> {
         return this.map(fn).join<B>()
     }
 
-    ap(a: IMappable<any>): IMappable<any> {
+    ap(a: IApplicable<any>): IApplicable<any> {
         return a.map(this.value)
     }
 

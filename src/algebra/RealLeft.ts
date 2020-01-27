@@ -1,10 +1,8 @@
-import { Either } from '..'
-import { IMappable } from './interfaces/IMappable'
-import { IChainable } from './interfaces/IChainable'
+import { Either } from '../'
 import { IApplicable } from './interfaces/IApplicable'
+import { IChainable } from './interfaces/IChainable'
 
-class Left<T> extends Either<T>
-    implements IMappable<T>, IChainable<T>, IApplicable {
+class Left<T> extends Either<T> implements IChainable<T>, IApplicable<T> {
     constructor($value: T) {
         super($value)
     }
@@ -21,7 +19,7 @@ class Left<T> extends Either<T>
     join<T>() {
         return Left.of<T>(this.value)
     }
-    ap(a: IMappable<any>): IMappable<any> {
+    ap(a: IApplicable<any>): IApplicable<any> {
         return a.map(this.value)
     }
 

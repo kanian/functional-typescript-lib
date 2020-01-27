@@ -1,14 +1,14 @@
 import { IApplicable } from '../algebra/interfaces/IApplicable'
 import { IChainable } from '../algebra/interfaces/IChainable'
-import { IMappable } from '../algebra/interfaces/IMappable'
 import { PointedFunctor } from './PointedFunctor'
 
-class Monad<T> extends PointedFunctor<T> implements IChainable<T>, IApplicable {
+class Monad<T> extends PointedFunctor<T>
+    implements IChainable<T>, IApplicable<T> {
     chain<B = T>(fn: (x: T) => B): IChainable<B> {
         return this.map(fn).join<B>()
     }
 
-    ap(a: IMappable<any>): IMappable<any> {
+    ap(a: IApplicable<any>): IApplicable<any> {
         return a.map(this.value)
     }
 
