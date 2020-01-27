@@ -4,7 +4,7 @@ import { IChainable } from './interfaces/IChainable'
 import { IJoinable } from './interfaces/IJoinable'
 
 class Nothing<T> extends APointable implements IChainable<T>, IApplicable<T> {
-    chain<B = any>(fn: (x: any) => B): IChainable<B> {
+    chain<B = any>(fn: (x: any) => B): IChainable<any> {
         return Nothing.of(null)
     }
     join(): IJoinable {
