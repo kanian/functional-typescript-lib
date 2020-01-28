@@ -2,8 +2,8 @@
 A set of typescript functional tools.
 
 To install:
-
-  ```npm install functional-typescript-lib
+  ```
+  npm install functional-typescript-lib
   ```
 
 The aim is to make the code as clear as possible. 
