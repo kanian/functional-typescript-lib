@@ -1,5 +1,5 @@
 # FUNCTIONAL TYPESCRIPT LIB
-A set of typescript functional tools.
+This library is a set of typescript functional tools.
 
 To install:
   ```
